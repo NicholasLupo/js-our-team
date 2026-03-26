@@ -37,14 +37,45 @@ const teamMembers = [
   }
 ];
 
-function getInfo (array) {
+function getInfo(array) {
 
-    for (let i = 0; i < array.length; i++) {
+  let cards = '';
 
-      const {name, role, email, img} = array[i];
-      console.log(name, role, email, img);
-      
-    }
+  for (let i = 0; i < array.length; i++) {
+
+    const { name, role, email, img } = array[i];
+
+    cards += getCard(name, role, email, img);
+
+  }
+
+  console.log(cards);
+  
+
+}
+
+function getCard (name, role, email, img) {
+
+      let card = `
+                <div class="card col flex-row bg-black mb-3">
+                <div class="card-image">
+                    <img src="${img}" alt="${name}" id="profile-img">
+                </div>
+                <div class="d-flex flex-column justify-content-around p-3">
+                    <div>
+                        <span class="fontFredoka text-white fs-3" id="username"> ${name} </span>
+                    </div>
+                    <div>
+                        <span class="text-white" id="work-role"> ${role} </span>
+                    </div>
+                    <div>
+                        <span class="text-info" id="email"> ${email} </span>
+                    </div>
+                </div>
+            </div>
+      `
+
+      return card;
 
 }
 
