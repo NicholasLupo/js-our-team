@@ -58,7 +58,7 @@ function getInfo(array) {
 function getCard(name, role, email, img) {
 
   let card = `
-                <div class="card col flex-row bg-black mb-3">
+              <div class="card col flex-row bg-black mb-3">
                 <div class="card-image">
                     <img src="/assets/${img}" alt="${name}" id="profile-img">
                 </div>
