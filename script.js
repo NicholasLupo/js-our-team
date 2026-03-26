@@ -37,6 +37,8 @@ const teamMembers = [
   }
 ];
 
+const container = document.getElementById('cards');
+
 function getInfo(array) {
 
   let cards = '';
@@ -49,17 +51,16 @@ function getInfo(array) {
 
   }
 
-  console.log(cards);
-  
+  container.innerHTML = cards
 
 }
 
-function getCard (name, role, email, img) {
+function getCard(name, role, email, img) {
 
-      let card = `
+  let card = `
                 <div class="card col flex-row bg-black mb-3">
                 <div class="card-image">
-                    <img src="${img}" alt="${name}" id="profile-img">
+                    <img src="/assets/${img}" alt="${name}" id="profile-img">
                 </div>
                 <div class="d-flex flex-column justify-content-around p-3">
                     <div>
@@ -75,7 +76,7 @@ function getCard (name, role, email, img) {
             </div>
       `
 
-      return card;
+  return card;
 
 }
 
