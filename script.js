@@ -36,3 +36,16 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+function getInfo (array) {
+
+    for (let i = 0; i < array.length; i++) {
+
+      const {name, role, email, img} = array[i];
+      console.log(name, role, email, img);
+      
+    }
+
+}
+
+getInfo(teamMembers)
